@@ -151,7 +151,7 @@ function modificarUsuario() {
             username: username,
             contrasena: contrasena,
             nombre: nombre,
-            apellidos: apellido,
+            apellido: apellido,
             email: email,
             celular: celular,
             direccion: direccion,
