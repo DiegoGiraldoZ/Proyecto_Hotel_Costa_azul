@@ -1,81 +1,137 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-        <!-- Popper JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="js/index.js"></script>
-        <link href="css/index.css" rel="stylesheet">
         <title>Registro - Reserva de habitaciones</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="js/index.js"></script>
+        <link href="css/register.css" rel="stylesheet">
+        <link rel="icon" href="img/logoLogin.png">
     </head>
-    <body>
-        <nav class="navbar navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.html">Crear cuenta - Reserva de Habitaciones</a>
-        </nav>
-        <main class="p-4 d-flex justify-content-center">
-            <div class="card sizeDiv">
-                <div class="card-body">
-                    <form id="form-register" class="pb-4">
-                        <div class="form-group">
-                            <label for="input-username">Nombre de usuario</label>
-                            <input type="text" class="form-control" id="input-username" placeholder="Nombre de usuario" required>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="input-contrasena">Contraseña</label>
-                                <input type="password" class="form-control" id="input-contrasena" placeholder="Contraseña" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="input-contrasena-repeat">Repetir contraseña</label>
-                                <input type="password" class="form-control" id="input-contrasena-repeat" placeholder="Repetir contraseña" required>
+    <body class="container-fluid vh-100 bg-secondary">
+        <div id="containerRegister">
+            <div class="row">
+                <div class="col">
+                    <div class="container-fluid" id="containerBarra">
+                        <div class="row">
+                            <div class="col">
+                                <nav class="navbar navbar-dark bg-transparent p-0">
+                                    <a class="navbar-brand text-white mt-2 fw-bold fs-3" href="index.html">
+                                       <button class="btn btn-primary fs-3">Inicio</button>
+                                    </a>
+                                </nav>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="input-nombre">Nombre</label>
-                            <input type="text" class="form-control" id="input-nombre" placeholder="Nombre" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-apellido">Apellido</label>
-                            <input type="text" class="form-control" id="input-apellido" placeholder="Apellido" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-email">Email</label>
-                            <input type="text" class="form-control" id="input-email" placeholder="Email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-celular">Celular</label>
-                            <input type="text" class="form-control" id="input-celular" placeholder="Celular" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-direccion">Direccion</label>
-                            <input type="text" class="form-control" id="input-direccion" placeholder="Direccion" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="input-saldo">Saldo</label>
-                            <input type="number" class="form-control" id="input-saldo" placeholder="0" min="0" max="10000" value="0" required>
-                        </div>
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="input-premium">
-                                <label class="form-check-label" for="input-premium">Premium</label>
+                    </div>
+                    <section class="text-lg-start">
+                        <div class="container-fluid" id="containerBarra">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="container py-4">
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-lg-6 mb-1 mb-lg-0" style="background-color: #e7ebda">
+                                                <div class="card cascading-right" style="
+                                                     background: hsla(0, 0%, 100%, 0.55);
+                                                     backdrop-filter: blur(30px);
+                                                     ">
+                                                    <div class="card-body p-5 shadow-5">
+                                                        <h2 class="fw-bold mb-4 text-center text-secondary">Crear cuenta</h2>
+                                                        <form id="form-register" class="pb-1">
+                                                            <!-- Sección Inputs -->
+                                                            
+                                                            <div class="form-outline">
+                                                                <label class="form-label mb-2 ms-1 text-secondary fw-bold" for="input-username">Nombre de usuario</label>
+                                                                <input type="text" class="form-control" id="input-username" placeholder="email@dominio.com" required>
+                                                            </div>
+
+                                                            <div class="row mt-1">
+                                                                <div class="col">
+                                                                    <label class="form-label mb-2 ms-1 text-secondary fw-bold" for="contrasena">Contraseña</label>
+                                                                    <input type="password" class="form-control" id="input-contrasena" placeholder="***********" required> 
+                                                                </div>
+                                                                <div class="col">
+                                                                    <label class="form-label mb-2 ms-1 text-secondary fw-bold" for="repetir-contrasena">Repetir contraseña</label>
+                                                                    <input type="password" class="form-control" id="input-contrasena-repeat" placeholder="***********" required>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div class="row mt-1">
+                                                                <div class="col">
+                                                                    <label class="form-label mb-2 ms-1 text-secondary fw-bold" for="input-nombre">Nombres</label>
+                                                                    <input type="text" class="form-control" id="input-nombre" placeholder="Nombres" required> 
+                                                                </div>
+                                                                <div class="col">
+                                                                    <label class="form-label mb-2 ms-1 text-secondary fw-bold" for="input-apellido">Apellidos</label>
+                                                                    <input type="text" class="form-control" id="input-apellido" placeholder="Apellidos" required>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-outline">
+                                                                <label class="form-label mb-2 ms-1 text-secondary fw-bold" for="input-email">Email</label>
+                                                                <input type="email" class="form-control" id="input-email" placeholder="email@dominio.com" required>
+                                                            </div>
+
+                                                            <div class="row mt-2 mb-1">
+                                                                <div class="col">
+                                                                    <label class="form-label mb-2 ms-1 text-secondary fw-bold" for="celular">Teléfono Celular</label>
+                                                                    <input type="tel" class="form-control ms-1" id="input-celular" placeholder="0000000000" required> 
+                                                                </div>
+                                                                <div class="col">
+                                                                    <label class="form-label mb-2 ms-1 text-secondary fw-bold" for="direccion">Dirección</label>
+                                                                    <input type="text" class="form-control" id="input-direccion" placeholder="Dirección" required>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-outline mb-3">
+                                                                <label class="form-label mb-2 ms-1 text-secondary fw-bold" for="input-saldo">Saldo</label>
+                                                                <input type="number" class="form-control me-1" id="input-saldo" placeholder="0" min="0" max="10000" value="0" required>
+                                                            </div>
+
+                                                            <!-- Checkbox Premium -->
+                                                            <div class="form-check form-switch d-flex justify-content-center info mb-3">
+                                                                <input class="form-check-input me-2" type="checkbox" id="input-premium">
+                                                                <label class="form-check-label text-primary fw-bold" for="input-premium">
+                                                                    Premium
+                                                                </label>
+                                                            </div>
+
+                                                            <!-- Submit button -->
+
+                                                            <div class="text-center"><button type="submit" class="btn btn-primary btn-block mb-3 text-white fw-bold" id="register-btn">
+                                                                    Registrar usuario
+                                                                </button>
+                                                            </div>
+                                                        </form>
+
+                                                        <div id="register-error" class="alert alert-danger d-none" role="alert"></div>
+
+                                                        <!-- link iniciar sesión -->
+                                                        <div class="d-flex gap-1 justify-content-center mt-1">
+                                                            <div class="text-secondary fw-bold fw-bolder fst-italic">¿Ya tienes cuenta? </div>
+                                                            <a href="login.html" class="text-decoration-none text-primary fw-bold fst-italic">Iniciar sesión</a>
+                                                        </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6 mb-5 mb-lg-0 mt-1Z">
+                                                <img src="img/fondoRegister.jpg" class="w-100 v-80 rounded-4 shadow-4"
+                                                     alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <input type="submit" class="btn btn-primary" id="register-btn" value="Registrar usuario" />
-                    </form>
-                    <div id="register-error" class="alert alert-danger d-none" role="alert"></div>
-                    <a href="home.html">¿Ya tienes cuenta? Iniciar sesión</a>
+                    </section>
                 </div>
-            </div> 
-        </main>
+            </div>
+        </div>
     </body>
 </html>

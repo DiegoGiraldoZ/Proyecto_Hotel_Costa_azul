@@ -14,32 +14,74 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <link href="css/index.css" rel="stylesheet">
-        
+        <link rel="icon" href="img/logoLogin.png">
         <script src="js/index.js"></script>
     </head>
-    <body>
-        <div class="container py-3">
-            <div class="card my-5">
-                <div class="card-body">
-                    <div class="row m-3">
-                        <div class="col-md-6 bg-login-image"></div>
-                        <div class="col-md-6">
-                            <h1 class="h4 text-gray-900 my-3">Bienvenido al Hotel Costa Azul</h1>
-                            <form id="form-login">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="usuario" placeholder="Usuario" required>
-                                </div>
-                                <br>
-                                <div class="form-group">
-                                    <input type="password" class="form-control" id="contrasena" placeholder="Contraseña" required>
-                                </div>
-                                <button type="submit" class="btn btn-primary btn-block" id="BTNENTRAR">Entrar</button>
-                                <hr>
-                            </form>
+    <body> 
+        <div class="container-fluid vh-100" id="containerPrincipal">
+            <div class="row">
+                <div class="col">
+                    <div class="container-fluid" id="containerBarra">
+                        <div class="row">
+                            <div class="col">
+                                <nav class="navbar navbar-light mb-5">
+                                    <div class="container-fluid">
+                                        <a class="navbar-brand d-flex justify-content-center align-items-center align-text-end" href="index.html">
+                                            <img src="img/logoLoginFondo.png" alt="logoInicio" width="70" height="" class="d-inline-block  text-white fs-5 fw-bold">
+                                            <br>      
+                                        </a>
+                                    </div>
+                                </nav>
+                            </div>
                         </div>
                     </div>
-                    <a href="register.html">¿Aún no tienes cuenta? Registrarme</a>
-                    <div id="login-error" class="alert alert-danger d-none" role="alert">Usuario o contraseña incorrectos</div>
+                    <div class="container-fluid d-flex justify-content-center align-items-center mt-5" id="containerFormulario">
+                        <div class="row bg-white p-4 rounded-3 text-secondary shadow-sm" style="width:25rem"  id="cajaFormulario">
+                            <div class="col">
+                                <!--------Creación formulario Login-------->
+                                <div>
+                                    <!--------Encabezado del formulario Login-------->
+                                    <!--------Imagen del login-------->
+                                    <div class="d-flex justify-content-center">
+                                        <img src="img/logoLogin.png"
+                                             alt="login-icon"
+                                             style="height: 7rem">
+                                    </div>
+                                    <!--------Título del login-------->
+                                    <div class="text-center fs-1 fw-bold">Ingreso</div>
+                                    <!--------Inputs usuario y contraseña-------->
+                                    <!--------Input usuario-------->
+                                    <!--------Inputs usuario y contraseña-------->
+                                    <!--------Input usuario-------->
+                                    <form id="form-login">
+                                        <div class="input-group mt-3">
+                                            <div class="input-group-text bg-info">
+                                                <img src="img/usuario.png" alt="usuario-icon" style="height: 1rem">
+                                            </div>
+                                            <input type="text" class="form-control bg-light" id="usuario" placeholder="Usuario" required>
+                                        </div>
+                                        <!--------Input contrasena-------->
+                                        <div class="input-group mt-2">
+                                            <div class="input-group-text bg-info">
+                                                <img src="img/contrasena.png" alt="contrasena-icon" style="height: 1rem">
+                                            </div>
+                                            <input  type="password" class="form-control bg-light" id="contrasena" placeholder="Contraseña" required>
+                                        </div>
+                                        <!--------Botón login-------->
+                                        <div class="d-grid col-6 mx-auto mt-4 shadow-sm">
+                                            <button type="submit" class="btn btn-info text-white fw-bold" id="BTNENTRAR">Entrar</button>
+                                        </div>
+                                    </form>
+                                    <!--------Link de registro-------->
+                                    <div>
+                                        <div class="d-flex justify-content-around fw-bold mt-2">¿Aún no tienes cuenta?</div>
+                                        <a class="d-flex justify-content-around text-decoration-none text-info fst-italic" href="register.html">Registrarme</a>
+                                    </div>
+                                    <div id="login-error" class="alert alert-danger d-none mt-4 mb-1" role="alert">Usuario o contraseña incorrectos</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
