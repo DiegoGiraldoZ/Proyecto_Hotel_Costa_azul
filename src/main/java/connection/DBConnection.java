@@ -5,15 +5,16 @@ import java.sql.DriverManager;
 
 public class DBConnection {
     Connection connection;
-    static String bd = "hotel_costa_azul";
-    static String port = "3306";
+    static String bd = "railway";
+    static String port = "6697";
     static String login = "root";
-    static String password = "admin"; 
+    static String password = "P7b8nzmu1bl7lY7JO72F";
+    static String ip = "containers-us-west-33.railway.app"; 
 
     public DBConnection() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:"+this.port+"/"+this.bd;
+            String url = "jdbc:mysql://"+ DBConnection.ip +":" + DBConnection.port + "/" + DBConnection.bd;
             connection = DriverManager.getConnection(url, this.login, this.password);
                 System.out.println("conexion establecida");
                        
